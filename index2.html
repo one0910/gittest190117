@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue</title>
+	<style>
+		.component{
+			border: 1px solid #ccc;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<custom-div></custom-div>
+		<custom-div></custom-div>
+		<custom-div></custom-div>
+	</div>
+
+
+
+	<script src="js/vue.min.js"></script>
+	<script>
+		//Registration--global
+		// Vue.component('custom-div',{});
+		Vue.component(
+			'custom-div',{
+			template: '<div class="component">Global--my component of Vue</div>',
+		});
+
+		new Vue({
+			el: '#app',
+		});
+	</script>	
+</body>
+</html>
